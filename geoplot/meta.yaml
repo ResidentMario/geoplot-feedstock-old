@@ -14,7 +14,9 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
+  skip: True # [win]
+  # Windows install appears to be dependent on https://github.com/SciTools/cartopy/issues/805.
   # noarch_python: True
   # preserve_egg_dir: True
   # entry_points:
