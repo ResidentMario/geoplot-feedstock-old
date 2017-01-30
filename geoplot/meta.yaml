@@ -13,6 +13,7 @@ source:
 
 build:
   skip: True # [win]
+  # Windows install requires resolving https://github.com/SciTools/cartopy/issues/805.
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -43,10 +44,6 @@ test:
   # commands:
     # You can put test commands to be run here.  Use this to test that the
     # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
 
   # requires:
     # Put any additional test requirements here.  For example
