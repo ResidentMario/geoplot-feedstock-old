@@ -10,23 +10,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.python.org/packages/3a/40/45951c006fdd7f08e33230e7f70809869788f93a7500816b7ce952dfd814/{{ name }}-{{ version }}.tar.gz
   md5: 4c27bfaf5da2bcb75623bba3a9539ad5
-#  patches:
-   # List any patch files here
-   # - fix.patch
 
 build:
   skip: True # [win]
-  # Windows install appears to be dependent on https://github.com/SciTools/cartopy/issues/805.
-  # noarch_python: True
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - geoplot = geoplot:main
-    #
-    # Would create an entry point called geoplot that calls geoplot.main()
-
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
@@ -51,7 +37,6 @@ requirements:
     - cartopy
 
 test:
-  # Python imports
   imports:
     - geoplot
 
@@ -72,7 +57,3 @@ about:
   license: MIT
   summary: 'High-level geospatial plotting for Python.'
   license_family: MIT
-
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
